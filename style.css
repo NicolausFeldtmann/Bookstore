@@ -1,12 +1,45 @@
 body{
     background-color: darkgray;
+    color: aliceblue;
+    font-size: 24px;
 }
 
 .entry{
+    background-color: rgb(95, 151, 150);
     width: 400px;
-    border: solid black;
+    margin: 8px;
+    padding: 24px;
+    border: solid rgb(95, 151, 150);
+    border-radius: 15px;
+}
+
+hr{
+    height: 1px;
+    background-color: rgb(111 206 225);
+    border: none;
+}
+
+.entryHeader{
+    display: flex;
+    justify-content: center;
+}
+
+.imgArea{
+    display: flex;
+    justify-self: center;
 }
 
 .entryImg{
-    width: 96px;
+    width: 160px;
+}
+
+.entryNav{
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.infoTable{
+    display: flex;
+    text-align: justify;
 }
