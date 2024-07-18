@@ -1,0 +1,12 @@
+body{
+    background-color: darkgray;
+}
+
+.entry{
+    width: 400px;
+    border: solid black;
+}
+
+.entryImg{
+    width: 96px;
+}
