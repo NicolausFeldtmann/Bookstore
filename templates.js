@@ -3,13 +3,13 @@ function getEntryTemplates(titel, price, likes, autor, year, genre) {
         <div class="entry">
             <div class="entryHeader">
                 <h3>${titel}</h3>
-            </div><hr>
+            </div>
             <div class="imgArea">
             <img class="entryImg" src="./assets/img/book2.png">
-            </div><hr>
+            </div>
             <div class="entryMain">
                 <div class="entryNav">Price: ${price}
-                <div class="likes">${likes}<br></div></div>
+                <div class="likes">${likes}</div></div>
                 <div class="BookInfo">
                     <table class="infoTable">
                         <tr>
