@@ -8,7 +8,7 @@ function getEntryTemplates(titel, price, likes, autor, year, genre) {
                 <img class="entryImg" src="./assets/img/book2.png">
             </div>
             <div class="entryMain">
-                <div class="entryNav">Price: ${price}
+                <div class="entryNav">Price: ${price}€
                 <div class="likes">${likes}</div></div>
                 <div class="BookInfo">
                     <table class="infoTable">

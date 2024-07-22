@@ -19,7 +19,7 @@ function renderBookEntrys() {
         commentArea[i].innerHTML +=`
         <tr class="comment">
             <td class="tdComment">${books[i].comments[j].name}:</td>
-            <td>${books[i].comments[j].comment}</td>
+            <td class="tdPost">${books[i].comments[j].comment}</td>
         </tr>`;
         }
     }
