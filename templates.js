@@ -5,7 +5,7 @@ function getEntryTemplates(titel, price, likes, autor, year, genre) {
                 <h3>${titel}</h3>
             </div>
             <div class="imgArea">
-            <img class="entryImg" src="./assets/img/book2.png">
+                <img class="entryImg" src="./assets/img/book2.png">
             </div>
             <div class="entryMain">
                 <div class="entryNav">Price: ${price}
@@ -21,7 +21,14 @@ function getEntryTemplates(titel, price, likes, autor, year, genre) {
                         <tr>
                             <td>Genre</td> <td>:${genre}</td>
                         </tr>
+                    </table>
                 </div>
+            </div>
+            <div class="commentSecction">
+                    <table>
+                        <tbody class="commentArea">
+                        </tbody>
+                    </table>
             </div>
         </div>`;
 }
