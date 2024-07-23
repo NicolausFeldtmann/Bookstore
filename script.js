@@ -13,14 +13,11 @@ function renderBookEntrys() {
         let year = books[i].publishedYear;
         let genre = books[i].genre;
         contentRef.innerHTML += getEntryTemplates(titel, price, likes, autor, year, genre);
-    
     const commentArea = document.getElementsByClassName('commentArea');
     for (let j = 0; j < books[i].comments.length; j++) {
         commentArea[i].innerHTML +=`
         <tr class="comment">
-            <td class="tdComment">${books[i].comments[j].name}:</td>
+            <td class="tdComment"><b>${books[i].comments[j].name}:</b></td>
             <td class="tdPost">${books[i].comments[j].comment}</td>
         </tr>`;
-        }
-    }
-}
+        }}}

@@ -30,5 +30,10 @@ function getEntryTemplates(titel, price, likes, autor, year, genre) {
                         </tbody>
                     </table>
             </div>
-        </div>`;
+            <div Class="inputfield">
+                <input class="nameInput" placeholder="Benutzername" id="nameInput" type="text">
+                <textarea class="commentInput" placeholder="Dein Komentar..." id="commentInput" type="text">
+                <img class="commentImg" id="commentImg" src=":/assets/ping.png">
+            </div>
+        </div>`; 
 }

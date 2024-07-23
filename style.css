@@ -1,6 +1,6 @@
 body{
     background-color: darkgray;
-    color: aliceblue;
+    color: #616365;
     font-size: 24px;
     font-family: "PT Sans", sans-serif;
 }
@@ -12,7 +12,7 @@ body{
     margin: 8px;
     padding: 24px;
     border: solid rgb(95, 151, 150);
-    border-radius: 80px;
+    border-radius: 48px;
 }
 
 hr{
@@ -42,7 +42,7 @@ hr{
 
 .entryMain{
     box-shadow: inset 0px 12px 25px 5px rgba(0, 0, 0, 0.4);
-    border-radius: 48px;
+    border-radius: 10px;
     padding: 28px;
     margin-bottom: 32px;
     
@@ -62,7 +62,7 @@ hr{
 
 .commentSecction{
     box-shadow: inset 0px 12px 25px 5px rgba(0, 0, 0, 0.4);
-    border-radius: 48px;
+    border-radius: 10px;
     padding: 28px;
     max-height: 200px;
     overflow-y: scroll;
@@ -70,6 +70,7 @@ hr{
 
 .comment{
     font-size: 18px;
+    display: -ms-inline-grid;
 }
 
 .tdComment{
@@ -83,17 +84,21 @@ hr{
 
 ::-webkit-scrollbar{
     width: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb{
-    background-color: blue;
+    background-color: rgb(95, 151, 150);
     border-radius: 10px;
     height: 64px;
 }
 
 ::-webkit-scrollbar-track{
     height: 36px;
-    background-color: aqua;
-    border-radius: 10px;
+    background-color: #256868;
+    border-radius: 5px;
+}
+
+.commentImg{
+    width: 24px;
 }
