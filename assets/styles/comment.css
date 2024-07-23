@@ -1,0 +1,91 @@
+.commentSecction{
+    box-shadow: inset 0px 12px 25px 5px rgba(0, 0, 0, 0.4);
+    border-radius: 10px;
+    padding: 28px;
+    margin-bottom: 24px;
+    max-height: 200px;
+    overflow-y: scroll;
+}
+
+.comment{
+    font-size: 18px;
+    display: -ms-inline-grid;
+}
+
+.tdComment{
+    padding-inline: 16px;
+    display: flex;
+}
+
+.tdPost{
+    padding-bottom: 18px;
+}
+
+::-webkit-scrollbar{
+    width: 10px;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb{
+    background-color: #256868;;
+    border-radius: 10px;
+    height: 64px;
+}
+
+::-webkit-scrollbar-track{
+    height: 36px;
+    background-color: rgb(95, 151, 150);
+    border-radius: 5px;
+}
+
+.inputfield{
+    padding-top: 16px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+}
+
+.commentImg{
+    width: 40px;
+}
+
+.inputfield{
+    background-color: darkseagreen;
+    border-radius: 10px;
+    padding: 12px;
+}
+
+.nameInput{
+    margin-bottom: 12px;
+    height: 36px;
+    box-shadow: inset 0px 12px 25px 5px rgba(0, 0, 0, 0.4);
+    background-color: rgb(95, 151, 150);
+    border: none;
+    border-radius: 10px;
+}
+
+.commentImgSection{
+    display: flex;
+    flex-direction: row-reverse;
+    margin-right: 16px;
+}
+
+.commentInput{
+    height: 88px;
+    margin-bottom: 12px;
+    box-shadow: inset 0px 12px 25px 5px rgba(0, 0, 0, 0.4);
+    background-color: rgb(95, 151, 150);
+    border: none;
+    border-radius: 10px;
+}
+
+.commentImg:hover{
+    transform: translate3d(0, 5px, 0);
+    cursor: pointer;
+}
+
+::placeholder{
+    color: #acacac;
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+}
