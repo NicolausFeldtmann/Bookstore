@@ -59,6 +59,14 @@ hr{
     justify-content: space-between;
 }
 
+.likes{
+    display: flex;
+}
+
+.heart{
+    width: 36px;
+}
+
 .infoTable{
     font-size: 20px;
     display: flex;
