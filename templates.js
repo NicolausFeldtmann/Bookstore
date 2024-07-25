@@ -9,7 +9,7 @@ function getEntryTemplates(titel, price, likes, autor, year, genre) {
             </div>
             <div class="entryMain">
                 <div class="entryNav">Price: ${price}€
-                <div class="likes">${likes}<img class="heart" src="./assets/img/heart.png"></div></div>
+                <div class="likes">${likes}<img class="heart" onclick="like(0)" src="./assets/img/heart.png"></div></div>
                 <div class="BookInfo">
                     <table class="infoTable">
                         <tr>
@@ -31,8 +31,8 @@ function getEntryTemplates(titel, price, likes, autor, year, genre) {
                     </table>
             </div>
             <div Class="inputfield">
-                <input class="nameInput" placeholder="Benutzername" id="nameInput" type="text">
-                <textarea class="commentInput" placeholder="Dein Komentar..." id="commentInput" type="text"></textarea>
+                <input class="nameInput" placeholder="Benutzername" type="text">
+                <textarea class="commentInput" placeholder="Dein Komentar..." type="text"></textarea>
                 <div class="commentImgSection">
                     <img class="commentImg" onclick="addComment()" src="./assets/img/pin.png">
                 </div>

@@ -1,6 +1,8 @@
 
+
 function init() {
     renderBookEntrys();
+    loadLocal();
 }
 
 function renderBookEntrys() {
@@ -22,3 +24,27 @@ function renderBookEntrys() {
             <td class="tdPost">${books[i].comments[j].comment}</td>
         </tr>`;
         }}}
+
+        function like() {
+            console.log();
+           let i = 0; i < books.length; i++;
+            if (books[i].liked) 
+                {books[i].likes--;
+                books[i].liked = false;
+            }else{
+                books[i].likes++;
+                books[i].liked = true;
+            }
+            saveLocal();
+            init();
+        }
+
+        function saveLocal() {
+            let booksAstext = JSON.stringify(books);
+            localStorage.setItem('books', booksAstext);
+        }
+
+        function loadLocal() {
+            let savedBooks = JSON.parse(localStorage.getItem('books'));
+            if (savedBooks) { books = savedBooks};
+        }
