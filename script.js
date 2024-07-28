@@ -12,10 +12,11 @@ function renderBookEntrys() {
         let titel = books[i].name;
         let price = books[i].price;
         let likes = books[i].likes;
+        let heart = books[i].heart;
         let autor = books[i].author;
         let year = books[i].publishedYear;
         let genre = books[i].genre;
-        contentRef.innerHTML += getEntryTemplates(titel, price, likes, autor, year, genre);
+        contentRef.innerHTML += getEntryTemplates(titel, price, likes, heart, autor, year, genre);
     const commentArea = document.getElementsByClassName('commentArea');
     for (let j = 0; j < books[i].comments.length; j++) {
         commentArea[i].innerHTML +=`
@@ -26,25 +27,33 @@ function renderBookEntrys() {
         }}}
 
         function like() {
-            console.log();
-           let i = 0; i < books.length; i++;
+            let i = 0; i < books.length; i++
             if (books[i].liked) 
                 {books[i].likes--;
                 books[i].liked = false;
+                books[i].heart = heart[i];
             }else{
-                books[i].likes++;
+                books[i].likes++; 
                 books[i].liked = true;
+                books[i].heart = heart[0];
             }
             saveLocal();
+            loadLocal();
             init();
         }
 
         function saveLocal() {
-            let booksAstext = JSON.stringify(books);
-            localStorage.setItem('books', booksAstext);
+            console.log("books");
+            localStorage.setItem("books", JSON.stringify(books));
+
         }
 
         function loadLocal() {
-            let savedBooks = JSON.parse(localStorage.getItem('books'));
-            if (savedBooks) { books = savedBooks};
+            console.log();
+            let books = localStorage.getItem("books");
+            if (books) {books = JSON.parse(books);
+            }
         }
+
+
+            

@@ -67,6 +67,20 @@ hr{
     width: 36px;
 }
 
+.heart:hover{
+    cursor: pointer;
+}
+
+.fullHeart{
+    width: 36px;
+    visibility: hidden;
+}
+
+.fullHeartShow{
+    visibility: visible;
+    opacity: 1;
+}
+
 .infoTable{
     font-size: 20px;
     display: flex;
