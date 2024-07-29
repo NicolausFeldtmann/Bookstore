@@ -1,4 +1,4 @@
-function getEntryTemplates(titel, price, likes, heart, autor, year, genre) {
+function getEntryTemplates(titel, price, likes, heart, autor, year, genre ,idx) {
    
     return `
         <div class="entry">
@@ -10,7 +10,7 @@ function getEntryTemplates(titel, price, likes, heart, autor, year, genre) {
             </div>
             <div class="entryMain">
                 <div class="entryNav">Price: ${price}€
-                <div class="likes">${likes}<img class="heart" onclick="like()" src="${heart}"></div></div>
+                <div class="likes">${likes}<img class="heart" onclick="like(${idx})" src="${heart}"></div></div>
                 <div class="BookInfo">
                     <table class="infoTable">
                         <tr>
