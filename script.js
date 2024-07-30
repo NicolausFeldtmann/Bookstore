@@ -1,8 +1,9 @@
 
 
 function init() {
-    renderBookEntrys();
     loadLocal();
+    renderBookEntrys();
+
 }
 
 function renderBookEntrys() {
@@ -44,17 +45,28 @@ function like(idx) {
     init();
 }
 
-function saveLocal() {
-    console.log("books");
+function saveLocal(index) {
+    const item = books[index];
     localStorage.setItem("books", JSON.stringify(books));
 
 }
 
-function loadLocal() {
-    console.log();
-    let books = localStorage.getItem("books");
-    if (books) {books = JSON.parse(books);
+function loadLocal(idx) {
+    const item = books[idx];
+    let savedBook = localStorage.getItem('books');
+    if (savedBook) {books = JSON.parse(savedBook);
+
     }
+}
+
+function addComment(idx, commentsName) {
+    let commetnInput = document.getElementById(`commetnInput${idx}`);
+    if (commetnInput.value.length < 1) {
+        alert('Kein Komentar!')
+    } else {books[idx].comments.push({commentsName, comment: commetnInput.value});
+    renderBookEntrys();
+    saveLocal();    
+}
 }
 
 

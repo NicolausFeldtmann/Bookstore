@@ -32,10 +32,9 @@ function getEntryTemplates(titel, price, likes, heart, autor, year, genre ,idx) 
                     </table>
             </div>
             <div Class="inputfield">
-                <input class="nameInput" placeholder="Benutzername" type="text">
-                <textarea class="commentInput" placeholder="Dein Komentar..." type="text"></textarea>
+                <textarea class="commentInput" id="commetnInput" placeholder="Dein Komentar..." type="text"></textarea>
                 <div class="commentImgSection">
-                    <img class="commentImg" onclick="addComment()" src="./assets/img/pin.png">
+                    <img class="commentImg" onclick="addComment(, 'BuchBert')" src="./assets/img/pin.png">
                 </div>
             </div>
         </div>`; 
