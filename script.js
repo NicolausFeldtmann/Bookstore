@@ -16,8 +16,7 @@ function renderBookEntrys() {
         let autor = books[i].author;
         let year = books[i].publishedYear;
         let genre = books[i].genre;
-        let idx = books[i].index;
-        contentRef.innerHTML += getEntryTemplates(titel, price, likes, heart, autor, year, genre, idx);
+        contentRef.innerHTML += getEntryTemplates(titel, price, likes, heart, autor, year, genre, i);
         const commentArea = document.getElementsByClassName('commentArea');
         for (let j = 0; j < books[i].comments.length; j++) {
             commentArea[i].innerHTML +=`
@@ -29,18 +28,17 @@ function renderBookEntrys() {
     }
 }
 
-function like(a) {
-    for (let a = 0; a < books.length; a++) {
-    if (books[a].liked) 
-        {books[a].likes--;
-        books[a].liked = false;
-        books[a].heart = heart[0];
-    }else{
-        books[a].likes++; 
-        books[a].liked = true;
-        books[a].heart = heart[1];
+function like(idx) {
+    const item = books[idx];
+    if (item.liked) {
+        item.likes--;
+        item.liked = false;
+        item.heart = heart[0];
+    } else {
+        item.likes++; 
+        item.liked = true;
+        item.heart = heart[1];
     }
-}
     saveLocal();
     loadLocal();
     init();
