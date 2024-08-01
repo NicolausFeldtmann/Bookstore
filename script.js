@@ -59,14 +59,21 @@ function loadLocal(idx) {
     }
 }
 
-function addComment(idx, commentsName) {
-    let commetnInput = document.getElementById(`commetnInput${idx}`);
-    if (commetnInput.value.length < 1) {
-        alert('Kein Komentar!')
-    } else {books[idx].comments.push({commentsName, comment: commetnInput.value});
-    renderBookEntrys();
-    saveLocal();    
-}
+function addComment(idx) {
+    //const item = books[idx];
+    let inputRef = document.getElementById(`input(${idx})`);
+    let input = inputRef.value;
+
+    if (inputRef.value ==0) {
+        alert('Kein Kommentar!')
+        return false;
+    }
+
+    books.push(input);
+    inputRef.value = "";
+
+    saveLocal();
+    init();
 }
 
 
