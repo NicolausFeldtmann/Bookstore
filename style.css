@@ -1,10 +1,17 @@
 body{
     background-color: darkgray;
+    display: flex;
     color: #616365;
     font-size: 24px;
     font-family: "PT Sans", sans-serif;
 }
 
+
+.content{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
 .entry{
     display: grid;
@@ -39,6 +46,7 @@ hr{
 
 .entryImg{
     width: 160px;
+    height: 160px;
 }
 
 .entryMain{

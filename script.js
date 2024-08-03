@@ -60,17 +60,14 @@ function loadLocal(idx) {
 }
 
 function addComment(idx) {
-    //const item = books[idx];
-    let inputRef = document.getElementById(`input(${idx})`);
-    let input = inputRef.value;
-
-    if (inputRef.value ==0) {
+    const item = books[idx];
+    let input = document.getElementById(`input(${idx})`);
+    if (input.value ==0) {
         alert('Kein Kommentar!')
         return false;
     }
-
-    books.push(input);
-    inputRef.value = "";
+    books.push({name: 'Buchbert', comment: input.value});
+    input.value = "";
 
     saveLocal();
     init();
