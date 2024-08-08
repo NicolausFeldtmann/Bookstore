@@ -3,7 +3,6 @@
 function init() {
     loadLocal();
     renderBookEntrys();
-
 }
 
 function renderBookEntrys() {
@@ -45,15 +44,13 @@ function like(idx) {
     init();
 }
 
+
 function saveLocal(index) {
     const item = books[index];
     localStorage.setItem("books", JSON.stringify(books));
 
 }
 
-function flushComments() {
-
-}
 
 function loadLocal(idx) {
     const item = books[idx];
@@ -62,6 +59,7 @@ function loadLocal(idx) {
 
     }
 }
+
 
 function addComment(idx) {
     const item = books[idx];
