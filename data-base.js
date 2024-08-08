@@ -1,3 +1,4 @@
+let comments = [];
 let heart = ['./assets/img/heart.png', './assets/img/heart2.png'];
 let books = [
     {

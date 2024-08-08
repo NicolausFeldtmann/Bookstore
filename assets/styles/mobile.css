@@ -1,6 +1,15 @@
 @media (max-width: 700px) {
+    body{
+     font-size: 12px;   
+    }
+    
     .entry{
+
         width: 300px;
         margin-inline: 0px;
+    }
+
+    .comment{
+        font-size: 14px;
     }
 }

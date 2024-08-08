@@ -51,6 +51,10 @@ function saveLocal(index) {
 
 }
 
+function flushComments() {
+
+}
+
 function loadLocal(idx) {
     const item = books[idx];
     let savedBook = localStorage.getItem('books');
@@ -62,11 +66,11 @@ function loadLocal(idx) {
 function addComment(idx) {
     const item = books[idx];
     let input = document.getElementById(`input(${idx})`);
-    if (input.value ==0) {
+    if (input.value == 0) {
         alert('Kein Kommentar!')
         return false;
     }
-    books.push({name: 'Buchbert', comment: input.value});
+    books[idx].comments.push({name: 'Buchbert', comment: input.value});
     input.value = "";
 
     saveLocal();
